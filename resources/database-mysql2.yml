@@ -1,0 +1,13 @@
+default: &default
+  adapter: mysql2
+  host: localhost
+  username: root
+development:
+  <<: *default
+  database: arproxy_<%= app_name %>
+test:
+  <<: *default
+  database: arproxy_<%= app_name %>_test
+production:
+  <<: *default
+  database: arproxy_<%= app_name %>
